@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "SPNumbersKeyboardView.h"
-
 #import "Masonry.h"
 
 @interface ViewController ()
@@ -55,10 +54,7 @@
         make.width.mas_equalTo(100);
     }];
     
-    
-    
     RAC(lb, text) = self.keyboard.desSig;
-    
     
     UILabel * lb1 = [UILabel new];
     
@@ -77,10 +73,7 @@
         make.width.mas_equalTo(100);
     }];
     
-    
-    
     RAC(lb1, text) = self.keyboard.errorSig;
-    
 }
 
 

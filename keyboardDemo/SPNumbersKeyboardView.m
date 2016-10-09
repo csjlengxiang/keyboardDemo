@@ -1,11 +1,3 @@
-//
-//  SPNumbersKeyboardView.m
-//  SavingPlus
-//
-//  Created by Meng Zhang on 16/1/26.
-//  Copyright © 2016年 CreditEase. All rights reserved.
-//
-
 #import "Masonry.h"
 #import "SPNumbersKeyboardView.h"
 
@@ -68,7 +60,6 @@ alpha:1.0]
     _inputString = inputString;
     if ([inputString isEqualToString:@""] || [inputString isEqualToString:@"+"] || [inputString isEqualToString:@"-"]) {
         _desString = @"0";
-        _floatValue = 0;
         _intValue = 0;
     } else {
         _desString = inputString;
