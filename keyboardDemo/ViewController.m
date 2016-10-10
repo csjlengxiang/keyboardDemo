@@ -7,12 +7,12 @@
 //
 
 #import "ViewController.h"
-#import "SPNumbersKeyboardView.h"
+#import "SPEnhancedNumbersKeyboardView.h"
 #import "Masonry.h"
 
 @interface ViewController ()
 
-@property (strong, nonatomic) SPNumbersKeyboardView * keyboard;
+@property (strong, nonatomic) SPEnhancedNumbersKeyboardView * keyboard;
 
 @end
 
@@ -23,7 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.keyboard = [[SPNumbersKeyboardView alloc] init];
+    self.keyboard = [[SPEnhancedNumbersKeyboardView alloc] init];
     
     [self.view addSubview:self.keyboard];
     
@@ -35,7 +35,6 @@
     [self.keyboard.errorSig subscribeNext:^(id x) {
         NSLog(@"---- %@", x);
     }];
-    
     
     UILabel * lb = [UILabel new];
     
@@ -74,6 +73,8 @@
     }];
     
     RAC(lb1, text) = self.keyboard.errorSig;
+    
+    self.keyboard.inputString = @"12.2";
 }
 
 

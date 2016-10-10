@@ -1,7 +1,7 @@
 #import <UIKit/UIKit.h>
 #import "ReactiveCocoa.h"
 
-@interface SPNumbersKeyboardView : UIView
+@interface SPEnhancedNumbersKeyboardView : UIView
 
 @property (nonatomic, strong) NSString * inputString;
 @property (nonatomic, strong, readonly) NSString * desString;
